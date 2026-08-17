@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game of Cardboard | Juegos sustentables</title>
+  <meta name="description" content="Game of Cardboard es un juego de mesa sustentable hecho con carton reciclado, pensado para colegios, familias y jugadores casuales.">
+  <script>
+    document.documentElement.dataset.page = location.hash.replace("#", "") || "inicio";
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <aside class="welcome-gate cinematic-intro" data-welcome-gate role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="intro-storm" aria-hidden="true">
+      <span class="storm-card storm-card-1"></span>
+      <span class="storm-card storm-card-2"></span>
+      <span class="storm-card storm-card-3"></span>
+      <span class="storm-card storm-card-4"></span>
+      <span class="storm-card storm-card-5"></span>
+      <span class="storm-card storm-card-6"></span>
+      <span class="storm-card storm-card-7"></span>
+      <span class="storm-card storm-card-8"></span>
+      <span class="storm-card storm-card-9"></span>
+      <span class="storm-card storm-card-10"></span>
+      <span class="storm-card storm-card-11"></span>
+      <span class="storm-card storm-card-12"></span>
+      <span class="storm-card storm-card-13"></span>
+      <span class="storm-card storm-card-14"></span>
+      <span class="storm-card storm-card-15"></span>
+      <span class="storm-card storm-card-16"></span>
+      <span class="storm-card storm-card-17"></span>
+      <span class="storm-card storm-card-18"></span>
+      <span class="storm-card storm-card-19"></span>
+      <span class="storm-card storm-card-20"></span>
+      <span class="storm-card storm-card-21"></span>
+      <span class="storm-card storm-card-22"></span>
+      <span class="storm-card storm-card-23"></span>
+      <span class="storm-card storm-card-24"></span>
+      <span class="storm-card storm-card-25"></span>
+      <span class="storm-card storm-card-26"></span>
+      <span class="storm-card storm-card-27"></span>
+      <span class="storm-card storm-card-28"></span>
+      <span class="storm-card storm-card-29"></span>
+      <span class="storm-card storm-card-30"></span>
+      <span class="storm-card storm-card-31"></span>
+      <span class="storm-card storm-card-32"></span>
+    </div>
+
+    <div class="intro-cut" aria-hidden="true"></div>
+    <div class="intro-purple-breach" aria-hidden="true"></div>
+
+    <div class="intro-hand" aria-hidden="false">
+      <article class="intro-card intro-card-side intro-card-left" aria-hidden="true">
+        <span class="card-type">04</span>
+        <strong>Reto Verde</strong>
+        <small>Obliga a cambiar la jugada.</small>
+      </article>
+
+      <article class="intro-card intro-card-main">
+        <p class="eyebrow">Game of Cardboard</p>
+        <h2 id="welcome-title">Bienvenido,<br>usuario.</h2>
+        <p>El tablero esta listo. Juega, compite y recicla con una partida hecha de carton recuperado.</p>
+        <button class="button primary intro-enter" type="button" data-welcome-enter>Entrar al tablero</button>
+      </article>
+
+      <article class="intro-card intro-card-side intro-card-right" aria-hidden="true">
+        <span class="card-type">07</span>
+        <strong>Recicla</strong>
+        <small>Convierte carton en estrategia.</small>
+      </article>
+
+      <div class="intro-die intro-die-four die-four" aria-hidden="true"></div>
+      <div class="intro-die intro-die-six die-six" aria-hidden="true"></div>
+    </div>
+  </aside>
+
+  <header class="site-header">
+    <a class="brand nav-link active" href="#inicio" data-page="inicio" aria-label="Game of Cardboard">
+      <span class="brand-mark">G</span>
+      <span>Game of Cardboard</span>
+    </a>
+    <nav class="nav" aria-label="Navegacion principal">
+      <a class="nav-link" href="#inicio" data-page="inicio">Inicio</a>
+      <a class="nav-link" href="#juego" data-page="juego">El juego</a>
+      <a class="nav-link" href="#cartas" data-page="cartas">Cartas</a>
+      <a class="nav-link" href="#impacto" data-page="impacto">Impacto</a>
+      <a class="nav-link" href="#compra" data-page="compra">Comprar</a>
+      <a class="nav-link" href="#instagram" data-page="instagram">Instagram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero page-panel" data-page-panel="inicio">
+      <div class="hero-scene" aria-hidden="true">
+        <div class="table-ring"></div>
+        <div class="float-card card-a">
+          <span class="card-type">07</span>
+          <strong>Recicla</strong>
+          <small>Convierte carton en estrategia.</small>
+        </div>
+        <div class="float-card card-b">
+          <span class="card-type">04</span>
+          <strong>Reto Verde</strong>
+          <small>Obliga a cambiar la jugada.</small>
+        </div>
+        <div class="float-card card-c">
+          <span class="card-type">06</span>
+          <strong>Revancha</strong>
+          <small>Vuelve al tablero con ventaja.</small>
+        </div>
+        <div class="dice dice-one die-four" aria-label="Dado con valor cuatro"></div>
+        <div class="dice dice-two die-six" aria-label="Dado con valor seis"></div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Juego de mesa sustentable</p>
+        <h1>Juega, compite y recicla.</h1>
+        <p class="hero-text">Un juego de mesa sustentable hecho con carton reciclado, pensado para recreos, familias y ferias escolares.</p>
+        <div class="hero-actions">
+          <a class="button primary nav-link" href="#compra" data-page="compra">Ver preventa</a>
+          <a class="button secondary nav-link" href="#cartas" data-page="cartas">Explorar cartas</a>
+        </div>
+        <div class="hero-stats" aria-label="Datos principales">
+          <div><strong>$4.990</strong><span>Precio sugerido</span></div>
+          <div><strong>100%</strong><span>Carton reciclado</span></div>
+          <div><strong>53</strong><span>Encuestas base</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product-section page-panel" data-page-panel="juego">
+      <div class="section-heading">
+        <p class="eyebrow">La propuesta</p>
+        <h2>Un producto escolar con apariencia de marca real.</h2>
+        <p>El proyecto combina entretencion, sustentabilidad y bajo costo, ofreciendo una alternativa frente a juegos comerciales que suelen superar los $15.000 CLP.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <span>01</span>
+          <h3>Economico</h3>
+          <p>Precio competitivo de $4.990 CLP para que estudiantes y familias puedan comprarlo sin sentirlo como un gasto pesado.</p>
+        </article>
+        <article class="feature">
+          <span>02</span>
+          <h3>Sustentable</h3>
+          <p>Usa carton recuperado como material principal, reduciendo desecho y dandole una segunda vida a un recurso comun.</p>
+        </article>
+        <article class="feature">
+          <span>03</span>
+          <h3>Durable</h3>
+          <p>Las cartas y piezas clave se protegen con termolaminado para mejorar resistencia, limpieza y vida util.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cards-section page-panel" data-page-panel="cartas">
+      <div class="section-heading compact">
+        <p class="eyebrow">Muestra visual</p>
+        <h2>Cartas que convierten el reciclaje en partida.</h2>
+      </div>
+
+      <div class="card-showcase">
+        <article class="game-card strategy">
+          <span class="card-kicker">Estrategia</span>
+          <h3>Movimiento Maestro</h3>
+          <p>Cambia tu posicion y bloquea una jugada rival.</p>
+          <strong>+2 pasos</strong>
+        </article>
+        <article class="game-card recycle">
+          <span class="card-kicker">Reciclaje</span>
+          <h3>Caja Revivida</h3>
+          <p>Recupera una carta descartada y vuelve al juego.</p>
+          <strong>Reutiliza</strong>
+        </article>
+        <article class="game-card chaos">
+          <span class="card-kicker">Reto</span>
+          <h3>Desafio Cartonero</h3>
+          <p>Todos intercambian una carta al azar.</p>
+          <strong>Giro total</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section impact-section page-panel" data-page-panel="impacto">
+      <div class="section-heading">
+        <p class="eyebrow">Impacto publico</p>
+        <h2>Entretenimiento con una segunda vida para el carton.</h2>
+        <p>Game of Cardboard comunica una idea simple: los materiales desechados pueden volver como productos atractivos, utiles y accesibles.</p>
+      </div>
+      <div class="impact-grid">
+        <article class="impact-card">
+          <strong>Ahorro</strong>
+          <span>Precio bajo frente a juegos comerciales de mayor costo.</span>
+        </article>
+        <article class="impact-card">
+          <strong>Educacion</strong>
+          <span>Promueve reciclaje y consumo responsable desde el juego.</span>
+        </article>
+        <article class="impact-card">
+          <strong>Comunidad</strong>
+          <span>Funciona en colegios, ferias, recreos y reuniones familiares.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section buy-section page-panel" data-page-panel="compra">
+      <div class="buy-panel">
+        <div>
+          <p class="eyebrow">Preventa escolar</p>
+          <h2>Juego base por $4.990 CLP</h2>
+          <p>Incluye cartas impresas, piezas sobre carton reciclado, reglas de juego y caja ecologica. Ideal para recreos, tardes familiares y ferias escolares.</p>
+        </div>
+        <div class="price-card">
+          <span>Precio lanzamiento</span>
+          <strong>$4.990</strong>
+          <small>Edicion basica sustentable</small>
+          <a class="button primary full" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Consultar por Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section instagram-section page-panel" data-page-panel="instagram">
+      <div class="instagram-copy">
+        <p class="eyebrow">Canal principal</p>
+        <h2>Publicidad pensada para Instagram.</h2>
+        <p>La comunicacion se centra en reels cortos, historias con encuestas y carruseles que muestran el antes y despues: carton desechado convertido en juego.</p>
+      </div>
+      <div class="phone-frame" aria-label="Vista previa de publicacion de Instagram">
+        <div class="phone-top"></div>
+        <div class="post-card">
+          <div class="post-visual">
+            <div class="mini-card one"></div>
+            <div class="mini-card two"></div>
+            <div class="mini-card three"></div>
+          </div>
+          <h3>Por que botarlo si puedes jugar con el?</h3>
+          <p>Nuevo juego sustentable hecho con carton reciclado. Primera edicion: $4.990 CLP.</p>
+          <span>@game_of_cardboard.cl</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Game of Cardboard</span>
+    <span>Proyecto escolar de emprendimiento | 2 NM C</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

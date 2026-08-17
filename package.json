@@ -1,0 +1,12 @@
+{
+  "name": "game-of-cardboard-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pagina comercial escolar para Game of Cardboard.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
