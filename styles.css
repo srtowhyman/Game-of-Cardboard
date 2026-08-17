@@ -92,7 +92,7 @@ body {
     radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08), transparent 8rem),
     repeating-radial-gradient(circle at 48% 54%, rgba(163, 25, 255, 0.12) 0 1px, transparent 1px 10px);
   opacity: 0;
-  animation: stormPulse 2.4s ease-out both;
+  animation: stormPulse 3.15s ease-out both;
 }
 
 .intro-storm,
@@ -106,23 +106,27 @@ body {
 .intro-storm {
   z-index: 2;
   overflow: hidden;
-  animation: stormExit 560ms ease 2.48s both;
+  animation: stormExit 620ms ease 3.62s both;
 }
 
 .storm-card {
   position: absolute;
   left: var(--x, 50%);
   top: var(--y, 50%);
-  width: var(--w, 76px);
+  width: var(--w, 15.5vw);
+  min-width: 118px;
+  max-width: 210px;
   aspect-ratio: 2.5 / 3.5;
   border: 5px solid rgba(255, 248, 233, 0.92);
   border-radius: 8px;
   background:
     linear-gradient(145deg, rgba(255,255,255,0.18), transparent),
     linear-gradient(165deg, var(--card-a, #8e24ff), var(--card-b, #240633));
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.42);
-  opacity: 0.9;
-  animation: stormCard var(--duration, 2.65s) cubic-bezier(.2,.78,.25,1) both;
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(255, 248, 233, 0.16);
+  opacity: 0.96;
+  animation: stormCard var(--duration, 3.3s) cubic-bezier(.14,.82,.18,1) both;
   animation-delay: var(--delay, 0ms);
   transform: rotate(var(--rot, -16deg));
   will-change: transform, opacity;
@@ -136,41 +140,41 @@ body {
   border-radius: 4px;
 }
 
-.storm-card-1 { --x: -10%; --y: 76%; --w: 136px; --rot: -15deg; --delay: 0ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-2 { --x: 5%; --y: 64%; --w: 126px; --rot: -13deg; --delay: 35ms; --card-a: #1bbe63; --card-b: #0b4b25; }
-.storm-card-3 { --x: 20%; --y: 52%; --w: 142px; --rot: -17deg; --delay: 70ms; --card-a: #e3a139; --card-b: #7b3f09; }
-.storm-card-4 { --x: 35%; --y: 40%; --w: 132px; --rot: -14deg; --delay: 105ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-5 { --x: 50%; --y: 28%; --w: 146px; --rot: -16deg; --delay: 140ms; --card-a: #1bbe63; --card-b: #0b4b25; }
-.storm-card-6 { --x: 65%; --y: 16%; --w: 134px; --rot: -12deg; --delay: 175ms; --card-a: #e3a139; --card-b: #7b3f09; }
-.storm-card-7 { --x: 80%; --y: 4%; --w: 142px; --rot: -15deg; --delay: 210ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-8 { --x: 95%; --y: -8%; --w: 126px; --rot: -13deg; --delay: 245ms; --card-a: #1bbe63; --card-b: #0b4b25; }
-.storm-card-9 { --x: -13%; --y: 104%; --w: 122px; --rot: -16deg; --delay: 60ms; --card-a: #e3a139; --card-b: #7b3f09; }
-.storm-card-10 { --x: 2%; --y: 92%; --w: 140px; --rot: -14deg; --delay: 95ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-11 { --x: 17%; --y: 80%; --w: 130px; --rot: -17deg; --delay: 130ms; --card-a: #1bbe63; --card-b: #0b4b25; }
-.storm-card-12 { --x: 32%; --y: 68%; --w: 148px; --rot: -13deg; --delay: 165ms; --card-a: #e3a139; --card-b: #7b3f09; }
-.storm-card-13 { --x: 47%; --y: 56%; --w: 126px; --rot: -15deg; --delay: 200ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-14 { --x: 62%; --y: 44%; --w: 144px; --rot: -14deg; --delay: 235ms; --card-a: #1bbe63; --card-b: #0b4b25; }
-.storm-card-15 { --x: 77%; --y: 32%; --w: 132px; --rot: -18deg; --delay: 270ms; --card-a: #e3a139; --card-b: #7b3f09; }
-.storm-card-16 { --x: 92%; --y: 20%; --w: 150px; --rot: -12deg; --delay: 305ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-17 { --x: -16%; --y: 48%; --w: 116px; --rot: -14deg; --delay: 120ms; --card-a: #1bbe63; --card-b: #0b4b25; }
-.storm-card-18 { --x: -1%; --y: 36%; --w: 136px; --rot: -18deg; --delay: 155ms; --card-a: #e3a139; --card-b: #7b3f09; }
-.storm-card-19 { --x: 14%; --y: 24%; --w: 124px; --rot: -13deg; --delay: 190ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-20 { --x: 29%; --y: 12%; --w: 142px; --rot: -16deg; --delay: 225ms; --card-a: #1bbe63; --card-b: #0b4b25; }
-.storm-card-21 { --x: 44%; --y: 0%; --w: 128px; --rot: -12deg; --delay: 260ms; --card-a: #e3a139; --card-b: #7b3f09; }
-.storm-card-22 { --x: 59%; --y: -12%; --w: 138px; --rot: -15deg; --delay: 295ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-23 { --x: 74%; --y: -24%; --w: 120px; --rot: -17deg; --delay: 330ms; --card-a: #1bbe63; --card-b: #0b4b25; }
-.storm-card-24 { --x: 89%; --y: -36%; --w: 146px; --rot: -14deg; --delay: 365ms; --card-a: #e3a139; --card-b: #7b3f09; }
-.storm-card-25 { --x: 7%; --y: 112%; --w: 118px; --rot: -15deg; --delay: 320ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-26 { --x: 22%; --y: 100%; --w: 134px; --rot: -13deg; --delay: 355ms; --card-a: #1bbe63; --card-b: #0b4b25; }
-.storm-card-27 { --x: 37%; --y: 88%; --w: 124px; --rot: -16deg; --delay: 390ms; --card-a: #e3a139; --card-b: #7b3f09; }
-.storm-card-28 { --x: 52%; --y: 76%; --w: 140px; --rot: -14deg; --delay: 425ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-29 { --x: 67%; --y: 64%; --w: 126px; --rot: -18deg; --delay: 460ms; --card-a: #1bbe63; --card-b: #0b4b25; }
-.storm-card-30 { --x: 82%; --y: 52%; --w: 146px; --rot: -12deg; --delay: 495ms; --card-a: #e3a139; --card-b: #7b3f09; }
-.storm-card-31 { --x: 97%; --y: 40%; --w: 132px; --rot: -16deg; --delay: 530ms; --card-a: #8e24ff; --card-b: #240633; }
-.storm-card-32 { --x: 112%; --y: 28%; --w: 120px; --rot: -14deg; --delay: 565ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-1 { --x: 92%; --y: -18%; --w: 15vw; --rot: -11deg; --delay: 0ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-2 { --x: 77%; --y: -13%; --w: 15.8vw; --rot: 8deg; --delay: 40ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-3 { --x: 61%; --y: -18%; --w: 15vw; --rot: -8deg; --delay: 80ms; --card-a: #e3a139; --card-b: #7b3f09; }
+.storm-card-4 { --x: 45%; --y: -12%; --w: 15.6vw; --rot: 10deg; --delay: 120ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-5 { --x: 29%; --y: -16%; --w: 15vw; --rot: -9deg; --delay: 160ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-6 { --x: 13%; --y: -10%; --w: 15.7vw; --rot: 7deg; --delay: 200ms; --card-a: #e3a139; --card-b: #7b3f09; }
+.storm-card-7 { --x: -3%; --y: -15%; --w: 15vw; --rot: -10deg; --delay: 240ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-8 { --x: 108%; --y: -9%; --w: 15.4vw; --rot: 9deg; --delay: 280ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-9 { --x: 98%; --y: 14%; --w: 16.2vw; --rot: 6deg; --delay: 130ms; --card-a: #e3a139; --card-b: #7b3f09; }
+.storm-card-10 { --x: 82%; --y: 18%; --w: 15.4vw; --rot: -10deg; --delay: 170ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-11 { --x: 66%; --y: 13%; --w: 16vw; --rot: 9deg; --delay: 210ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-12 { --x: 50%; --y: 18%; --w: 15.3vw; --rot: -7deg; --delay: 250ms; --card-a: #e3a139; --card-b: #7b3f09; }
+.storm-card-13 { --x: 34%; --y: 12%; --w: 16.1vw; --rot: 8deg; --delay: 290ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-14 { --x: 18%; --y: 18%; --w: 15.2vw; --rot: -9deg; --delay: 330ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-15 { --x: 2%; --y: 13%; --w: 16vw; --rot: 10deg; --delay: 370ms; --card-a: #e3a139; --card-b: #7b3f09; }
+.storm-card-16 { --x: -14%; --y: 19%; --w: 15.2vw; --rot: -8deg; --delay: 410ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-17 { --x: 92%; --y: 45%; --w: 15.6vw; --rot: -9deg; --delay: 260ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-18 { --x: 76%; --y: 40%; --w: 16.3vw; --rot: 9deg; --delay: 300ms; --card-a: #e3a139; --card-b: #7b3f09; }
+.storm-card-19 { --x: 60%; --y: 45%; --w: 15.3vw; --rot: -8deg; --delay: 340ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-20 { --x: 44%; --y: 39%; --w: 16.1vw; --rot: 8deg; --delay: 380ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-21 { --x: 28%; --y: 45%; --w: 15.4vw; --rot: -10deg; --delay: 420ms; --card-a: #e3a139; --card-b: #7b3f09; }
+.storm-card-22 { --x: 12%; --y: 40%; --w: 16vw; --rot: 9deg; --delay: 460ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-23 { --x: -4%; --y: 45%; --w: 15.3vw; --rot: -7deg; --delay: 500ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-24 { --x: 108%; --y: 41%; --w: 16.2vw; --rot: 8deg; --delay: 540ms; --card-a: #e3a139; --card-b: #7b3f09; }
+.storm-card-25 { --x: 98%; --y: 73%; --w: 15.1vw; --rot: 10deg; --delay: 390ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-26 { --x: 82%; --y: 69%; --w: 15.9vw; --rot: -8deg; --delay: 430ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-27 { --x: 66%; --y: 74%; --w: 15.2vw; --rot: 9deg; --delay: 470ms; --card-a: #e3a139; --card-b: #7b3f09; }
+.storm-card-28 { --x: 50%; --y: 68%; --w: 16vw; --rot: -10deg; --delay: 510ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-29 { --x: 34%; --y: 74%; --w: 15.4vw; --rot: 8deg; --delay: 550ms; --card-a: #1bbe63; --card-b: #0b4b25; }
+.storm-card-30 { --x: 18%; --y: 69%; --w: 16.1vw; --rot: -7deg; --delay: 590ms; --card-a: #e3a139; --card-b: #7b3f09; }
+.storm-card-31 { --x: 2%; --y: 74%; --w: 15.3vw; --rot: 9deg; --delay: 630ms; --card-a: #8e24ff; --card-b: #240633; }
+.storm-card-32 { --x: -14%; --y: 69%; --w: 16vw; --rot: -8deg; --delay: 670ms; --card-a: #1bbe63; --card-b: #0b4b25; }
 
 .intro-cut {
-  z-index: 3;
+  z-index: 4;
   pointer-events: none;
   overflow: hidden;
 }
@@ -180,30 +184,38 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 162vmax;
-  height: 5px;
+  width: 168vmax;
+  height: clamp(44px, 5.6vw, 78px);
   border-radius: 999px;
-  background: linear-gradient(90deg, transparent, #fff8e9 14%, #ff3df2 50%, #fff8e9 86%, transparent);
+  background:
+    linear-gradient(180deg,
+      rgba(12, 0, 20, 0.92) 0%,
+      rgba(81, 8, 128, 0.96) 34%,
+      rgba(239, 57, 255, 0.9) 50%,
+      rgba(81, 8, 128, 0.96) 66%,
+      rgba(12, 0, 20, 0.92) 100%),
+    linear-gradient(90deg, transparent, rgba(255, 248, 233, 0.9) 16%, rgba(255, 248, 233, 0.58) 50%, rgba(255, 248, 233, 0.9) 84%, transparent);
   box-shadow:
-    0 0 20px rgba(255, 248, 233, 0.92),
-    0 0 36px rgba(239, 57, 255, 0.58);
+    0 0 0 2px rgba(255, 209, 255, 0.44),
+    0 0 30px rgba(255, 248, 233, 0.62),
+    0 0 58px rgba(239, 57, 255, 0.66);
   opacity: 0;
-  transform: translate(-50%, -50%) rotate(28deg) scaleX(0);
-  animation: diagonalCut 760ms cubic-bezier(.18,.8,.2,1) 2.72s both;
+  transform: translate(-50%, -50%) rotate(30deg) scaleX(0);
+  animation: diagonalCut 720ms cubic-bezier(.18,.8,.2,1) 3.3s both;
 }
 
 .intro-purple-breach {
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
   background:
-    radial-gradient(circle at 52% 52%, rgba(239, 57, 255, 0.32), transparent 22rem),
-    linear-gradient(135deg, #1b032b, #7514bf 48%, #190222);
+    radial-gradient(circle at 52% 52%, rgba(188, 35, 255, 0.34), transparent 23rem),
+    linear-gradient(135deg, #0b0013, #2a0440 42%, #5b0b8f 58%, #12001d);
   clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-  animation: purpleBreach 900ms cubic-bezier(.18,.8,.2,1) 2.88s both;
+  animation: purpleBreach 960ms cubic-bezier(.18,.8,.2,1) 3.48s both;
 }
 
 .intro-hand {
-  z-index: 4;
+  z-index: 8;
   width: min(1040px, calc(100vw - 28px));
   height: min(610px, calc(100vh - 28px));
   inset: 50% auto auto 50%;
@@ -221,10 +233,12 @@ body {
   color: var(--cream);
   font-family: Archivo, Inter, sans-serif;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.42);
-  opacity: 0;
+  opacity: 1;
   transform-origin: 50% 90%;
-  animation: introCardIn 900ms cubic-bezier(.18,.8,.2,1) 3.25s both;
+  transform: var(--intro-transform, translate(-50%, -50%));
+  animation: introCardIn 900ms cubic-bezier(.18,.8,.2,1) 4.05s both;
   pointer-events: auto;
+  z-index: 8;
 }
 
 .intro-card::before {
@@ -237,7 +251,9 @@ body {
 }
 
 .intro-card-main {
-  z-index: 3;
+  z-index: 10;
+  --intro-transform: translate(-50%, -50%);
+  --intro-start-transform: translate(-50%, -42%) scale(0.74);
   width: min(430px, 80vw);
   min-height: min(530px, 82vh);
   display: flex;
@@ -249,7 +265,6 @@ body {
   background:
     linear-gradient(135deg, #fff8e9, #f4e9ff 62%, #ead8ff),
     radial-gradient(circle at 72% 28%, rgba(163, 25, 255, 0.18), transparent 16rem);
-  transform: translate(-50%, -50%);
   box-shadow:
     0 30px 70px rgba(0, 0, 0, 0.48),
     0 0 0 1px rgba(255, 248, 233, 0.54);
@@ -262,6 +277,18 @@ body {
   font-size: clamp(38px, 4.5vw, 58px);
   line-height: 0.9;
   text-wrap: balance;
+}
+
+.intro-card-main h2 span,
+.intro-card-main h2 small {
+  display: block;
+}
+
+.intro-card-main h2 small {
+  margin-top: 2px;
+  font: inherit;
+  font-size: 0.88em;
+  color: rgba(22, 8, 31, 0.86);
 }
 
 .intro-card-main p {
@@ -288,7 +315,7 @@ body {
 }
 
 .intro-card-side {
-  z-index: 2;
+  z-index: 9;
   width: min(250px, 24vw);
   aspect-ratio: 2.5 / 3.5;
   display: flex;
@@ -308,7 +335,7 @@ body {
 .intro-card-side small {
   position: relative;
   z-index: 1;
-  width: 88%;
+  width: 74%;
   margin-top: 8px;
   color: rgba(255, 248, 233, 0.86);
   font-size: clamp(12px, 1.15vw, 15px);
@@ -318,19 +345,21 @@ body {
 
 .intro-card-left {
   background: linear-gradient(165deg, #18c963, #0f5b2d);
-  transform: translate(-182%, -50%) rotate(-10deg);
-  animation-delay: 3.38s;
+  --intro-transform: translate(-200%, -50%) rotate(-10deg);
+  --intro-start-transform: translate(-70%, -40%) rotate(-4deg) scale(0.72);
+  animation-delay: 4.16s;
 }
 
 .intro-card-right {
   background: linear-gradient(165deg, #e8a13a, #7a3f08);
-  transform: translate(82%, -50%) rotate(10deg);
-  animation-delay: 3.48s;
+  --intro-transform: translate(124%, -50%) rotate(10deg);
+  --intro-start-transform: translate(42%, -40%) rotate(4deg) scale(0.72);
+  animation-delay: 4.24s;
 }
 
 .intro-die {
   position: absolute;
-  z-index: 5;
+  z-index: 12;
   width: 66px;
   aspect-ratio: 1;
   border: 5px solid rgba(255, 248, 233, 0.92);
@@ -343,7 +372,7 @@ body {
     inset -8px -10px 0 rgba(22, 8, 31, 0.08),
     inset 6px 6px 0 rgba(255, 255, 255, 0.74);
   opacity: 0;
-  animation: introDieIn 760ms cubic-bezier(.18,.8,.2,1) 3.62s both;
+  animation: introDieIn 760ms cubic-bezier(.18,.8,.2,1) 4.38s both;
 }
 
 .intro-die-four {
@@ -356,7 +385,7 @@ body {
   right: 18%;
   bottom: 8%;
   transform: rotate(9deg);
-  animation-delay: 3.76s;
+  animation-delay: 4.5s;
 }
 
 .welcome-orbit {
@@ -737,8 +766,7 @@ html[data-page="inicio"] [data-page-panel="inicio"],
 html[data-page="juego"] [data-page-panel="juego"],
 html[data-page="cartas"] [data-page-panel="cartas"],
 html[data-page="impacto"] [data-page-panel="impacto"],
-html[data-page="compra"] [data-page-panel="compra"],
-html[data-page="instagram"] [data-page-panel="instagram"] {
+html[data-page="compra"] [data-page-panel="compra"] {
   display: grid !important;
 }
 
@@ -1039,16 +1067,14 @@ h1 {
 }
 
 .section-heading h2,
-.buy-panel h2,
-.instagram-copy h2 {
+.buy-panel h2 {
   margin: 0;
   font-size: clamp(30px, 4.4vw, 56px);
   line-height: 0.98;
 }
 
 .section-heading p,
-.buy-panel p,
-.instagram-copy p {
+.buy-panel p {
   color: rgba(23, 32, 22, 0.72);
   font-size: clamp(15px, 1.5vw, 18px);
   line-height: 1.48;
@@ -1061,8 +1087,7 @@ h1 {
 }
 
 .feature,
-.buy-panel,
-.phone-frame {
+.buy-panel {
   background: rgba(255, 248, 233, 0.74);
   border: 1px solid rgba(23, 32, 22, 0.14);
   border-radius: var(--radius);
@@ -1092,6 +1117,8 @@ h1 {
 .cards-section {
   background: rgba(23, 32, 22, 0.92);
   color: var(--cream);
+  align-content: center;
+  gap: clamp(14px, 2vw, 22px);
 }
 
 .cards-section .section-heading p {
@@ -1100,19 +1127,21 @@ h1 {
 
 .card-showcase {
   display: grid;
-  grid-template-columns: repeat(3, minmax(190px, 260px));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: center;
-  align-items: end;
-  gap: clamp(18px, 3vw, 34px);
+  align-items: stretch;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  gap: clamp(14px, 2vw, 24px);
   perspective: 1100px;
 }
 
 .game-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 2.5 / 3.5;
+  aspect-ratio: 3.25 / 2;
   min-height: 0;
-  padding: 24px 22px;
+  padding: clamp(18px, 2.1vw, 26px);
   border-radius: 10px;
   overflow: hidden;
   background:
@@ -1120,16 +1149,16 @@ h1 {
     linear-gradient(165deg, #bd8242, #7f4217);
   border: 8px solid #f8efd6;
   color: var(--cream);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  transform: rotateX(3deg) rotateZ(-2deg);
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 10px;
+  transform: rotateX(3deg) rotateZ(-1deg);
   transition: transform 220ms ease, box-shadow 220ms ease;
   box-shadow: 0 24px 46px rgba(0,0,0,0.3);
 }
 
 .game-card:nth-child(2) {
-  transform: translateY(18px) rotateX(3deg) rotateZ(1deg);
+  transform: translateY(8px) rotateX(3deg) rotateZ(1deg);
 }
 
 .game-card:nth-child(3) {
@@ -1162,8 +1191,9 @@ h1 {
 }
 
 .game-card h3 {
-  margin: 0 0 14px;
-  font-size: clamp(25px, 3vw, 34px);
+  align-self: end;
+  margin: 0;
+  font-size: clamp(22px, 2.4vw, 32px);
   line-height: 1;
   position: relative;
   z-index: 1;
@@ -1177,24 +1207,19 @@ h1 {
 }
 
 .game-card p {
-  margin: 0 0 34px;
-  line-height: 1.55;
+  max-width: 86%;
+  margin: 0;
+  line-height: 1.34;
 }
 
 .game-card strong {
-  position: absolute;
-  bottom: 26px;
-  left: 22px;
-  right: 22px;
+  position: relative;
   font-family: Archivo, sans-serif;
   font-size: clamp(19px, 2.2vw, 25px);
 }
 
 .card-kicker {
-  position: absolute;
-  top: 28px;
-  left: 22px;
-  right: 22px;
+  position: relative;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1223,7 +1248,8 @@ h1 {
 }
 
 .impact-card {
-  min-height: 230px;
+  position: relative;
+  min-height: 184px;
   padding: 26px;
   display: flex;
   flex-direction: column;
@@ -1235,6 +1261,16 @@ h1 {
     linear-gradient(160deg, #45115f, #1a0827 68%, #10031a);
   border: 1px solid rgba(255, 248, 233, 0.08);
   box-shadow: 0 18px 42px rgba(21, 7, 32, 0.22);
+  overflow: hidden;
+}
+
+.impact-card::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 2px dashed rgba(255, 248, 233, 0.22);
+  border-radius: 7px;
+  pointer-events: none;
 }
 
 .impact-card strong {
@@ -1252,10 +1288,58 @@ h1 {
 
 .buy-panel {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: minmax(0, 1fr) 340px;
   gap: 32px;
   align-items: center;
   padding: clamp(28px, 5vw, 54px);
+}
+
+.buy-info {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.buy-info article {
+  position: relative;
+  min-height: 142px;
+  padding: 18px 18px 16px;
+  border-radius: var(--radius);
+  color: var(--cream);
+  background:
+    radial-gradient(circle at 18% 18%, rgba(239, 57, 255, 0.18), transparent 9rem),
+    linear-gradient(145deg, #331052, #16081f 72%);
+  border: 1px solid rgba(255, 248, 233, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.buy-info span {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  color: var(--purple-bright);
+  background: rgba(255, 248, 233, 0.08);
+  font-family: Archivo, Inter, sans-serif;
+  font-weight: 900;
+}
+
+.buy-info strong {
+  display: block;
+  margin-bottom: 8px;
+  font-family: Archivo, Inter, sans-serif;
+  font-size: 22px;
+  line-height: 1.05;
+}
+
+.buy-info p {
+  margin: 0;
+  color: rgba(255, 248, 233, 0.74);
+  font-size: 14px;
+  line-height: 1.42;
 }
 
 .price-card {
@@ -1283,85 +1367,6 @@ h1 {
 .price-card .button {
   margin-top: 22px;
   background: linear-gradient(135deg, #ef39ff, #a319ff 48%, #5f16cb);
-}
-
-.instagram-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 390px;
-  gap: 36px;
-  align-items: center;
-}
-
-.phone-frame {
-  padding: 18px;
-  background: #201f1e;
-}
-
-.phone-top {
-  width: 82px;
-  height: 6px;
-  margin: 0 auto 18px;
-  border-radius: 99px;
-  background: rgba(255,255,255,0.28);
-}
-
-.post-card {
-  min-height: 0;
-  padding: 18px;
-  background: #fff;
-  border-radius: var(--radius);
-}
-
-.post-visual {
-  position: relative;
-  height: min(34vh, 300px);
-  overflow: hidden;
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, #421063, #f1d9ff 54%, #16081f);
-}
-
-.mini-card {
-  position: absolute;
-  width: 90px;
-  height: 130px;
-  border: 5px solid #fff7df;
-  border-radius: 7px;
-  background: linear-gradient(145deg, var(--green), #0b5a29);
-  box-shadow: 0 16px 34px rgba(0,0,0,0.28);
-}
-
-.mini-card.one {
-  left: 55px;
-  top: 82px;
-  transform: rotate(-18deg);
-}
-
-.mini-card.two {
-  left: 142px;
-  top: 70px;
-  transform: rotate(4deg);
-  background: linear-gradient(145deg, var(--gold), var(--cardboard-dark));
-}
-
-.mini-card.three {
-  left: 225px;
-  top: 90px;
-  transform: rotate(20deg);
-}
-
-.post-card h3 {
-  margin: 18px 0 8px;
-  font-size: 28px;
-}
-
-.post-card p {
-  color: rgba(23, 32, 22, 0.72);
-  line-height: 1.5;
-}
-
-.post-card span {
-  color: var(--purple);
-  font-weight: 900;
 }
 
 .footer {
@@ -1401,11 +1406,14 @@ h1 {
     opacity: 0;
     scale: 0.8;
   }
-  40% {
-    opacity: 1;
+  34% {
+    opacity: 0.9;
+  }
+  78% {
+    opacity: 0.22;
   }
   100% {
-    opacity: 0.16;
+    opacity: 0.08;
     scale: 1.25;
   }
 }
@@ -1413,44 +1421,45 @@ h1 {
 @keyframes stormExit {
   to {
     opacity: 0;
-    filter: blur(10px);
+    filter: blur(12px);
+    transform: translateX(6vw) scale(1.03);
   }
 }
 
 @keyframes stormCard {
   0% {
     opacity: 0;
-    transform: translate(-22vw, -34vh) rotate(calc(var(--rot, -16deg) - 34deg)) scale(0.72);
+    transform: translate(-145vw, 0) rotate(calc(var(--rot, -16deg) - 28deg)) scale(0.72);
   }
   46% {
-    opacity: 0.92;
-    transform: translate(0, 0) rotate(var(--rot, -16deg)) scale(1);
+    opacity: 1;
+    transform: translate(8vw, 0) rotate(calc(var(--rot, -16deg) + 4deg)) scale(1.03);
   }
-  76% {
-    opacity: 0.92;
+  62% {
+    opacity: 1;
     transform: translate(0, 0) rotate(var(--rot, -16deg)) scale(1);
   }
   100% {
-    opacity: 0;
-    transform: translate(24vw, 34vh) rotate(calc(var(--rot, -16deg) + 28deg)) scale(0.9);
+    opacity: 1;
+    transform: translate(0, 0) rotate(var(--rot, -16deg)) scale(1);
   }
 }
 
 @keyframes diagonalCut {
   0% {
     opacity: 0;
-    transform: translate(-50%, -50%) rotate(28deg) scaleX(0);
+    transform: translate(-50%, -50%) rotate(30deg) scaleX(0);
   }
   14% {
     opacity: 1;
   }
   82% {
     opacity: 1;
-    transform: translate(-50%, -50%) rotate(28deg) scaleX(1);
+    transform: translate(-50%, -50%) rotate(30deg) scaleX(1);
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) rotate(28deg) scaleX(1);
+    transform: translate(-50%, -50%) rotate(30deg) scaleX(1);
   }
 }
 
@@ -1459,25 +1468,29 @@ h1 {
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     opacity: 0;
   }
-  20% {
+  18% {
     opacity: 1;
-    clip-path: polygon(0 0, 4% 0, 100% 96%, 100% 100%, 96% 100%, 0 4%);
+    clip-path: polygon(0 0, 7% 0, 100% 93%, 100% 100%, 93% 100%, 0 7%);
+  }
+  56% {
+    opacity: 1;
+    clip-path: polygon(0 0, 26% 0, 100% 74%, 100% 100%, 74% 100%, 0 26%);
   }
   100% {
     opacity: 1;
-    clip-path: polygon(0 0, 16% 0, 100% 84%, 100% 100%, 84% 100%, 0 16%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
 @keyframes introCardIn {
   from {
     opacity: 0;
-    scale: 0.72;
+    transform: var(--intro-start-transform, translate(-50%, -42%) scale(0.74));
     filter: blur(14px);
   }
   to {
     opacity: 1;
-    scale: 1;
+    transform: var(--intro-transform, translate(-50%, -50%));
     filter: blur(0);
   }
 }
@@ -1571,11 +1584,11 @@ h1 {
   }
 
   .intro-card-left {
-    transform: translate(-156%, -48%) rotate(-10deg);
+    --intro-transform: translate(-126%, -48%) rotate(-10deg);
   }
 
   .intro-card-right {
-    transform: translate(56%, -48%) rotate(10deg);
+    --intro-transform: translate(104%, -48%) rotate(10deg);
   }
 
   .nav {
@@ -1604,8 +1617,8 @@ h1 {
 
   .feature-grid,
   .impact-grid,
-  .instagram-section,
-  .buy-panel {
+  .buy-panel,
+  .buy-info {
     grid-template-columns: 1fr;
   }
 
@@ -1656,11 +1669,11 @@ h1 {
   }
 
   .intro-card-left {
-    transform: translate(-116%, -39%) rotate(-11deg);
+    --intro-transform: translate(-112%, -34%) rotate(-12deg);
   }
 
   .intro-card-right {
-    transform: translate(16%, -39%) rotate(11deg);
+    --intro-transform: translate(52%, -38%) rotate(11deg);
   }
 
   .intro-die {
@@ -1740,12 +1753,14 @@ h1 {
   }
 
   .card-showcase {
-    grid-template-columns: minmax(0, 260px);
+    grid-template-columns: minmax(0, min(330px, 100%));
   }
 
   .game-card,
   .game-card:nth-child(2),
   .game-card:nth-child(3) {
+    min-height: 218px;
+    aspect-ratio: auto;
     transform: none;
   }
 
@@ -1757,11 +1772,4 @@ h1 {
     height: 340px;
   }
 
-  .phone-frame {
-    width: 100%;
-  }
-
-  .post-visual {
-    height: 240px;
-  }
 }
