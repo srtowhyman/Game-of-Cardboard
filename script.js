@@ -3,6 +3,7 @@ const navLinks = [...document.querySelectorAll(".nav-link")];
 const pagePanels = [...document.querySelectorAll("[data-page-panel]")];
 const welcomeGate = document.querySelector("[data-welcome-gate]");
 const welcomeEnter = document.querySelector("[data-welcome-enter]");
+const welcomeSeenKey = "gameOfCardboardIntroSeen";
 let welcomeIntroReady = false;
 
 if ("scrollRestoration" in history) {
@@ -51,21 +52,32 @@ window.addEventListener("popstate", () => {
   showPage(page, false);
 });
 
-showPage(location.hash.replace("#", "") || "inicio", false);
+showPage("inicio", false);
+history.replaceState({ page: "inicio" }, "", "#inicio");
 
 function closeWelcomeGate() {
   if (!welcomeGate) return;
+  sessionStorage.setItem(welcomeSeenKey, "true");
   welcomeGate.classList.add("is-hidden");
   welcomeGate.setAttribute("aria-hidden", "true");
+  showPage("inicio", false);
+  history.replaceState({ page: "inicio" }, "", "#inicio");
 }
 
 function initWelcomeGate() {
   if (!welcomeGate) return;
 
+  if (sessionStorage.getItem(welcomeSeenKey) === "true") {
+    welcomeIntroReady = true;
+    welcomeGate.classList.add("is-hidden");
+    welcomeGate.setAttribute("aria-hidden", "true");
+    return;
+  }
+
   setTimeout(() => {
     welcomeIntroReady = true;
     welcomeEnter?.focus();
-  }, 4600);
+  }, 5350);
   welcomeEnter?.addEventListener("click", closeWelcomeGate);
 
   document.addEventListener("keydown", (event) => {
