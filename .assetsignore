@@ -1,0 +1,10 @@
+.git
+.git/**
+.wrangler
+.wrangler/**
+node_modules
+node_modules/**
+package.json
+bun.lock
+package-lock.json
+npm-debug.log
